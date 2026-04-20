@@ -1,0 +1,11 @@
+@tailwind base;
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    border-color: black;
+}
+
+@tailwind components;
+@tailwind utilities;
