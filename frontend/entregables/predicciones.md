@@ -16,4 +16,4 @@ Predicción B
 
 (Paolo)Escribe tu respuesta aquí: 
 1. En total serian 11 NavBar, PlatoCard, MesaCard, MenuPage, MesasPage, CarritoPage, DetalleMesa, NotFound, PedidoContext, App, main
-2. En todas las lineas donde llamamos parametros sin especificar el tipo de valor
+2. En todas las lineas donde llamamos parametros sin especificar el tipo de valor, mas de 20 creo
