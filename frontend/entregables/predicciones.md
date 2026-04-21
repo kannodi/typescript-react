@@ -57,3 +57,11 @@ precio:       number
 stock:        number
 categoria:    string
 
+(Joel) Las propiedades del plato son las siguientes: 
+
+- _id:          string
+- nombre:       string
+- descripcion:  string
+- precio:       number
+- categoria:    string
+- disponible:   boolean
