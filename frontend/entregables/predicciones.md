@@ -50,3 +50,10 @@ precio:       ___________
 categoria:    ___________
 disponible:   ___________
 
+(Paolo)
+_id:          string
+nombre:       string
+precio:       number
+categoria:    string
+disponible:   boolean
+
