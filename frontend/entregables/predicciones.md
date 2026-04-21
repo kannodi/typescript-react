@@ -50,10 +50,10 @@ precio:       ___________
 categoria:    ___________
 disponible:   ___________
 
-(Paolo)
+(Paolo) plato tiene el siguiente segun el backend que obtenemos de railway:
 _id:          string
 nombre:       string
 precio:       number
+stock:        number
 categoria:    string
-disponible:   boolean
 
