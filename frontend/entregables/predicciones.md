@@ -39,3 +39,14 @@ Predicción B
     - main.jsx -> main.tsx
 
 2. Los errores apareceran en todas las lineas donde los parametros no tengan un tipo de valor asignado (ej: number, string, boolean, object, array, etc).
+
+Predicción C
+✍ Antes de modificar PlatoCard.tsx — escribe en predicciones.md
+El componente PlatoCard recibe un plato como prop. ¿Qué propiedades tiene un plato según el modelo de datos del sistema?
+¿Qué tipo TypeScript corresponde a cada una? Escríbelo aquí antes de ver el código:
+_id:          ___________
+nombre:       ___________
+precio:       ___________
+categoria:    ___________
+disponible:   ___________
+
