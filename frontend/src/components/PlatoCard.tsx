@@ -1,10 +1,21 @@
-import { usePedido } from '../context/PedidoContext';
+import { usePedido, PedidoItem } from '../context/PedidoContext';
+interface Plato {
+  _id: string;
+  nombre: string;
+  precio: number;
+  stock: number;
+  categoria: string;
+}
+interface PlatoCardProps {
+  plato: Plato;
+}
 
-function PlatoCard({ plato }) {
-  const { agregarPlato, restarPlato, cambiarTipo, limpiarPedido, pedido } = usePedido();
+function PlatoCard({ plato }: PlatoCardProps) {
+
+  const { agregarPlato, restarPlato, pedido } = usePedido();
 
   // 1. Buscamos en el carrito (pedido.items) si existe algún item con el mismo ID que este plato
-  const itemEnCarrito = pedido.items.find(item => item.platoId === plato._id);
+  const itemEnCarrito = pedido.items.find((item: PedidoItem) => item.platoId === plato._id);
   // 2. Si lo encuentra, tomamos su cantidad. Si no existe en el carrito, la cantidad es 0
   const cantidadActual = itemEnCarrito ? itemEnCarrito.cantidad : 0;
 
@@ -48,14 +59,7 @@ function PlatoCard({ plato }) {
           Restar de la comanda
         </button>
       </div>
-      {/*<div className='flex   items-center mt-1'>
-        <button onClick={() => cambiarTipo(pedido.tipo === 'mesa' ? 'para_llevar' : 'mesa')}
-          className=' mt-2  bg-yellow-500 text-white font-bold py-1 rounded hover:bg-yellow-600 p-4'>
-          Cambiar Tipo</button>
-        <button onClick={() => limpiarPedido()}
-          className=' mt-2 ml-4 bg-yellow-500 text-white font-bold py-1 rounded hover:bg-yellow-600 p-4'>
-          Limpiar Pedido</button>
-      </div>*/}
+
     </div>
 
 
