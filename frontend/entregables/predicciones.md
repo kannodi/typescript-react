@@ -87,3 +87,5 @@ Si getMesas() retorna Promise<Mesa[]>, ¿qué tipo tiene 'mesas' en este código
 Respuesta: mesas es de tipo ___________
 
 (Joel) mesas es de tipo Mesa[]
+
+(Paolo) el getmesas devuelve una promesa ya que es lo trae una funcion asincrona, las mesas que trae viene en array []
