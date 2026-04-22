@@ -33,3 +33,5 @@ Anota en reflexion.md sección D.
 Anota en reflexion.md sección E.
 
 (Paolo) Tiene todo el sentido, es necesario ya que de esta forma nos momento de usar una api o funciones les daremos el tipo exacto de retorno y asi nos ahorramos muchos errores
+
+(Joel) Sí, tiene mucho sentido. Te permite tener autocompletado en el editor y detectar errores de escritura antes de ejecutar el código. Así te aseguras de saber exactamente qué propiedades trae la respuesta del backend sin tener que adivinar.
