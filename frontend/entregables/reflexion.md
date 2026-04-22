@@ -1,3 +1,14 @@
+# ⏱ Feedback 30 segundos — Bloque A
+Navigator pregunta al Driver:
+• ¿Qué parte de la instalación fue confusa?
+• ¿Qué opción del tsconfig no tienes claro para qué sirve?
+Anota la respuesta en tu reflexion.md (sección Bloque A).
+
+(Paolo)
+1. la instalacion fue algo confusa ya que habia que configurar el tsconfig.json para que funcionara correctamente con react, entre tanto codigo que tenia no sabia que modificar al inicio
+2. La mayoria no la tengo claro pero hay 3 importantes que me acuerdo bien, el primero es el strict, este para supervisar bien, el segundo es el jsx, que lo deja poder entender react y el tercero me lo recordo el agente, el noEmit, le dice a ts que solo busque errores y deje que VITE construya la app
+
+
 # ⏱ Feedback 30 segundos — Bloque B
 Anota en reflexion.md sección B:
 • ¿Cuántos errores aparecieron? ¿Más o menos de lo que predijiste?
