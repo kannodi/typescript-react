@@ -76,3 +76,6 @@ Respuesta:
 
 (Paolo) MesaCard recibe id, numero, estado, antes comensales y capacidad tambien pero ya no.
 Primero declaramos el tipo de retorno y ya podra inferir que tipo es
+
+(Joel) los props que recibe MesaCard son id, numero y estado.
+No, no puede inferir el tipo de retorno de una funcion que retorna JSX sin que lo declares.
