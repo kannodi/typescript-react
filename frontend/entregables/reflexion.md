@@ -19,3 +19,9 @@ Anota en reflexion.md sección C:
 
 (Joel) No fue lo que esperaba, ya que el componente PlatoCard tiene una llamada en contexto dentro de la funcion de agregarPlato, por lo que fué necesario solucionar lo del contexto y agregamos las interfaces.
 Y en cuanto al significado de '(plato: Plato) => void', significa que la funcion recibe un parametro de tipo Plato y no retorna ningun valor.
+
+⏱ Feedback 30 segundos — Bloque D
+• ¿El union type te parece mejor que usar string? ¿Por qué sí o por qué no?
+Anota en reflexion.md sección D.
+
+(Paolo) Si es mucho mejor ya que definimos exactamente el tipo de string que esperamos, de esta forma nos evitamos errores de que ingresen valores que no son validos
