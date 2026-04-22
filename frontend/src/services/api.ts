@@ -1,5 +1,32 @@
 import axios from 'axios';
-
+// -------- backend aun inexistente
+type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
+type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada' | 'cancelada' | 'cerrada';
+type TipoPedido = 'mesa' | 'para_llevar';
+export interface Mesa {
+    _id: string;
+    numero: number;
+    capacidad: number;
+    estado: EstadoMesa;
+    pedidoActivoId?: string | null;
+}
+// Interfaz para el Pedido completo
+export interface Pedido {
+    _id: string;
+    mesaId: string | null;
+    tipo: TipoPedido;
+    estado: EstadoPedido;
+    items: any[]; // Luego lo detallamos más
+    total: number;
+    createdAt: string;
+}// --------
+export interface Plato {
+    _id: string;
+    nombre: string;
+    precio: number;
+    stock: number;
+    categoria: string;
+}
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 console.log(BASE_URL);
 
@@ -46,29 +73,30 @@ export async function getPlatos() {
 
 
 //BLOQUE A
-// ── Mesas ────────────────────────────────────────
-export async function getMesas() {
+// ── Mesas ────────────────────────────────────────SIN EXISTIR
+export async function getMesas(): Promise<Mesa[]> {
     const response = await api.get('/mesas');
     return response.data;
 }
 
-export async function getMesasDisponibles() {
+export async function getMesasDisponibles(): Promise<Mesa[]> {
     const response = await api.get('/mesas?estado=disponible');
     return response.data;
 }
 
-// ── Pedidos ───────────────────────────────────────
-export async function getPedido(id) {
+// ── Pedidos ─────────────────────────────────────── SIN EXISTIR
+export async function getPedido(id: string): Promise<Pedido> {
     const response = await api.get(`/pedidos/${id}`);
     return response.data;
 }
 
-export async function crearPedido(pedidoData) {
+export async function crearPedido(pedidoData: any): Promise<Pedido> {
     try {
         // Intento real al backend   // pedidoData: { mesaId, tipo, items[] }
-        const response = await api.post('/pedidos', pedidoData);
+        const response = await api.post<Pedido>('/pedidos', pedidoData);
         return response.data;  // pedido creado con _id y estado: pendiente
     } catch (error) {
+
         // --- BACKEND SIMULADO ---
         // Si el backend real falla (ej. no está encendido), simulamos la respuesta
         console.warn("Backend no detectado. Usando respuesta simulada.");
@@ -81,7 +109,7 @@ export async function crearPedido(pedidoData) {
                     tipo: pedidoData.tipo,
                     items: pedidoData.items,
                     estado: 'pendiente',
-                    total: pedidoData.items.reduce((acc, i) => acc + (i.precioUnitario * i.cantidad), 0),
+                    total: pedidoData.items.reduce((acc: number, i: any) => acc + (i.precioUnitario * i.cantidad), 0),
                     createdAt: new Date().toISOString()
                 });
             }, 1500); // Simulamos latencia de red
@@ -90,7 +118,7 @@ export async function crearPedido(pedidoData) {
 }
 
 
-export async function cambiarEstadoPedido(id, estado) {
+export async function cambiarEstadoPedido(id: string, estado: EstadoPedido): Promise<Pedido> {
     // estado: 'en_preparacion' | 'lista' | 'entregada' | 'cancelada'
     const response = await api.patch(`/pedidos/${id}/estado`, { estado });
     return response.data;
@@ -99,7 +127,7 @@ export async function cambiarEstadoPedido(id, estado) {
 
 
 // login SIGUE USANDO `axios` directo -> No necesita token para mandar correo/password
-export async function login(email, password) {
+export async function login(email: string, password: string) {
     // Aquí sí ponemos la URL completa porque no usamos la instancia
     const response = await axios.post(`${BASE_URL}/auth/login`, {
         email,

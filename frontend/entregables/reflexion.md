@@ -30,4 +30,4 @@ Anota en reflexion.md sección D.
 • ¿Tiene sentido tipar el retorno de las funciones API? ¿Qué beneficio concreto ves?
 Anota en reflexion.md sección E.
 
-
+(Paolo) Tiene todo el sentido, es necesario ya que de esta forma nos momento de usar una api o funciones les daremos el tipo exacto de retorno y asi nos ahorramos muchos errores
