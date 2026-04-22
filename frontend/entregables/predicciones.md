@@ -65,3 +65,9 @@ categoria:    string
 - precio:       number
 - categoria:    string
 - disponible:   boolean
+
+⏱ Feedback 30 segundos — Bloque C
+Anota en reflexion.md sección C:
+• ¿El tipado de 'onAgregar' fue lo que esperabas?  ¿Qué significa '(plato: Plato) => void'?
+
+(Paolo) No fue lo que esperaba, ya que habia una llamada en contexto dentro de platocard, tuvimos que averiguar como solucionar lo del contexto y agregamos las interfaces, cosa que parece que se avanza en el dia 2, pero si se logro entender como se tipean la interface para el componente
