@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-
+type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fueradeservicio'
 
 interface MesaCardProps {
   id: string;
   numero: number;
-  estado: string;
+  estado: EstadoMesa;
 }
 function MesaCard({ id, numero, estado }: MesaCardProps) {
   return (

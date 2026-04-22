@@ -2,10 +2,11 @@ import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import { usePedido } from '../context/PedidoContext';
-interface NavBarProps {
-    nombreRestaurante: string;
-}
-function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
+const INFORMACION_RESTAURANTE = {
+    nombre: "Restaurante Raul"
+} as const; // esta constante nunca me movera, el restaurante no le cambiaremos el nombre
+
+function NavBar() {
     const { pedido } = usePedido();
     const totalItems = pedido.items.reduce((acc, i) => acc + i.cantidad, 0);
     const navigate = useNavigate();
@@ -34,7 +35,7 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
     return (
         <>
             <nav className="flex items-center justify-between px-7 bg-blue-400">
-                <h1 className=' text-white text-4xl p-7 '> {nombreRestaurante}</h1>
+                <h1 className=' text-white text-4xl p-7 '>{INFORMACION_RESTAURANTE.nombre}</h1>
                 <div className=' flex gap-2'>
                     <NavLink to='/menu' className={navBarClass}>Menu</NavLink>
                     <NavLink to='/mesas' className={navBarClass}>Mesas</NavLink>
