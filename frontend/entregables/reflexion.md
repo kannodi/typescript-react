@@ -1,4 +1,4 @@
-⏱ Feedback 30 segundos — Bloque B
+# ⏱ Feedback 30 segundos — Bloque B
 Anota en reflexion.md sección B:
 • ¿Cuántos errores aparecieron? ¿Más o menos de lo que predijiste?
 • ¿Qué error fue el más inesperado?
@@ -11,7 +11,7 @@ Anota en reflexion.md sección B:
 1. La cantidad de errores que aparecieron fueron mas de 90.
 2. Son demasiados, por lo que no sabria decir cual fue el mas inesperado.
 
-⏱ Feedback 30 segundos — Bloque C
+# ⏱ Feedback 30 segundos — Bloque C
 Anota en reflexion.md sección C:
 • ¿El tipado de 'onAgregar' fue lo que esperabas?  ¿Qué significa '(plato: Plato) => void'?
 
@@ -20,7 +20,7 @@ Anota en reflexion.md sección C:
 (Joel) No fue lo que esperaba, ya que el componente PlatoCard tiene una llamada en contexto dentro de la funcion de agregarPlato, por lo que fué necesario solucionar lo del contexto y agregamos las interfaces.
 Y en cuanto al significado de '(plato: Plato) => void', significa que la funcion recibe un parametro de tipo Plato y no retorna ningun valor.
 
-⏱ Feedback 30 segundos — Bloque D
+# ⏱ Feedback 30 segundos — Bloque D
 • ¿El union type te parece mejor que usar string? ¿Por qué sí o por qué no?
 Anota en reflexion.md sección D.
 
