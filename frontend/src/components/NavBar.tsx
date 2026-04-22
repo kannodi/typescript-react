@@ -1,9 +1,11 @@
-import PropTypes from "prop-types"
 import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import { usePedido } from '../context/PedidoContext';
-function NavBar({ nombreRestaurante = "Restaurante Raul" }) {
+interface NavBarProps {
+    nombreRestaurante: string;
+}
+function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
     const { pedido } = usePedido();
     const totalItems = pedido.items.reduce((acc, i) => acc + i.cantidad, 0);
     const navigate = useNavigate();
@@ -59,8 +61,5 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }) {
     );
 }
 
-NavBar.propTypes = {
-    nombreRestaurante: PropTypes.string
-};
 
 export default NavBar

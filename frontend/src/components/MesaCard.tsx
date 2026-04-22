@@ -1,7 +1,11 @@
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-function MesaCard({ id, numero, capacidad, estado, comensales }) {
+interface MesaCardProps {
+  id: string;
+  numero: number;
+  estado: string;
+}
+function MesaCard({ id, numero, estado }: MesaCardProps) {
   return (
     <div className='p-10 flex flex-col items-center' >
       <Link to={`/mesas/${id}`} className='text-black hover:underline  text-bold text-2xl'>Ver detalle </Link>
@@ -11,11 +15,6 @@ function MesaCard({ id, numero, capacidad, estado, comensales }) {
   )
 }
 
-MesaCard.propTypes = {
-  numero: PropTypes.number.isRequired,
-  estado: PropTypes.string.isRequired,
-  capacidad: PropTypes.number,
-  comensales: PropTypes.number,
-}
+
 
 export default MesaCard
