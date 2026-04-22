@@ -42,3 +42,8 @@ Escribir en reflexion.md sección 'Cierre del día':
 • ¿Qué ventaja concreta viste de TypeScript vs JavaScript puro?
 • Total de errores TypeScript al cierre: ___ (lo bajaremos mañana)
  
+ (Paolo) 
+ 1. El concepto mas complejo para mi fue el como configurar los archivos al inicio para que ts funcione con react, la mayoria de la configuracion inicial fue compleja, ya luego solo fue ir dando los tipos de valores a los datos enviados/esperados de nuestros componentes
+ 2. La ventaja que veo es que ts a comparacion de js podemos encontrar los errores al momento de compilar codigo y no en la ejecucion del programa
+
+## Errores al final del bloque F : 36
