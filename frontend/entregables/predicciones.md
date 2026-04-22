@@ -79,3 +79,10 @@ Primero declaramos el tipo de retorno y ya podra inferir que tipo es
 
 (Joel) los props que recibe MesaCard son id, numero y estado.
 No, no puede inferir el tipo de retorno de una funcion que retorna JSX sin que lo declares.
+
+# Predicción E
+✍ Antes de modificar api.js — escribe en predicciones.md
+Si getMesas() retorna Promise<Mesa[]>, ¿qué tipo tiene 'mesas' en este código?
+  const mesas = await getMesas();
+Respuesta: mesas es de tipo ___________
+
