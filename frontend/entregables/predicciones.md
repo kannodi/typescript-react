@@ -1,4 +1,4 @@
-Predicción A
+# Predicción A
 ✍ Antes de ejecutar — escribe en tu predicciones.md
 
 ¿Qué archivo generará el comando de instalación además de actualizar package.json?
@@ -15,7 +15,7 @@ Predicción A
     - "jsx": "react-jsx" -> Esto sirve para que typescript entienda que trabajara con react.
     - "strict": true -> Con esto typescript activa el supervisor de typescript de modo que localize los errores antes de ejecutar el proyecto.
 
-Predicción B
+# Predicción B
 ✍ Antes de ejecutar — escribe en tu predicciones.md
 ¿Cuántos archivos vas a renombrar en total? Lista sus nombres.
 ¿En qué tipo de líneas crees que aparecerá el primer error TS?
@@ -40,7 +40,7 @@ Predicción B
 
 2. Los errores apareceran en todas las lineas donde los parametros no tengan un tipo de valor asignado (ej: number, string, boolean, object, array, etc).
 
-Predicción C
+# Predicción C
 ✍ Antes de modificar PlatoCard.tsx — escribe en predicciones.md
 El componente PlatoCard recibe un plato como prop. ¿Qué propiedades tiene un plato según el modelo de datos del sistema?
 ¿Qué tipo TypeScript corresponde a cada una? Escríbelo aquí antes de ver el código:
@@ -71,3 +71,13 @@ Anota en reflexion.md sección C:
 • ¿El tipado de 'onAgregar' fue lo que esperabas?  ¿Qué significa '(plato: Plato) => void'?
 
 (Paolo) No fue lo que esperaba, ya que habia una llamada en contexto dentro de platocard, tuvimos que averiguar como solucionar lo del contexto y agregamos las interfaces, cosa que parece que se avanza en el dia 2, pero si se logro entender como se tipean la interface para el componente
+
+# Predicción D
+✍ Antes de modificar — escribe en predicciones.md
+¿Qué props recibe MesaCard? (mira tu implementación de días anteriores)
+¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
+Respuesta: 
+
+(Paolo) MesaCard recibe id, numero, estado, antes comensales y capacidad tambien pero ya no.
+Primero declaramos el tipo de retorno y ya podra inferir que tipo es
+
