@@ -23,7 +23,7 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
             navigate('/login');
         }
     }
-    const navBarClass = ({ isActive }) => {
+    const navBarClass = ({ isActive }: { isActive: boolean }) => {
         const navBar = "text-black font-bold text-xl px-1 py-1 w-fit m-2 ";
 
         return navBar + (isActive
@@ -34,7 +34,7 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
     return (
         <>
             <nav className="flex items-center justify-between px-7 bg-blue-400">
-                <h1 className='  text-white text-4xl p-7' align='center' width='100%' height='100% '> {nombreRestaurante}</h1>
+                <h1 className=' text-white text-4xl p-7 '> {nombreRestaurante}</h1>
                 <div className=' flex gap-2'>
                     <NavLink to='/menu' className={navBarClass}>Menu</NavLink>
                     <NavLink to='/mesas' className={navBarClass}>Mesas</NavLink>
@@ -53,7 +53,7 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }: NavBarProps) {
                     {sesion ? (
                         <button onClick={botonLogout} className="text-white font-bold text-xl rounded-full px-1 py-1 w-fit m-2 flex justify-end">SALIR</button>
                     ) : (
-                        <button href='/login' className="text-white font-bold text-xl rounded-full px-1 py-1 w-fit m-2 flex justify-end">ENTRAR</button>
+                        <button onClick={() => navigate('/login')} className="text-white font-bold text-xl rounded-full px-1 py-1 w-fit m-2 flex justify-end">ENTRAR</button>
                     )}
                 </div>
             </nav >
