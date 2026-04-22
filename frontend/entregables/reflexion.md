@@ -26,6 +26,8 @@ Anota en reflexion.md sección D.
 
 (Paolo) Si es mucho mejor ya que definimos exactamente el tipo de string que esperamos, de esta forma nos evitamos errores de que ingresen valores que no son validos
 
+(Joel) Si, porque definimos que valores corresponden a esa propiedad. De esta evitamos errores producidos por ingresar valores no correspondientes.
+
 # ⏱ Feedback 30 segundos — Bloque E
 • ¿Tiene sentido tipar el retorno de las funciones API? ¿Qué beneficio concreto ves?
 Anota en reflexion.md sección E.
