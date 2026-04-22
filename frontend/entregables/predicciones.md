@@ -86,3 +86,4 @@ Si getMesas() retorna Promise<Mesa[]>, ¿qué tipo tiene 'mesas' en este código
   const mesas = await getMesas();
 Respuesta: mesas es de tipo ___________
 
+(Joel) mesas es de tipo Mesa[]
