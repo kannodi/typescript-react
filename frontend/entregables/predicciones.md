@@ -17,8 +17,13 @@ Tipos que se van a eliminar de api.ts:
 # Predicción C
 ✍  Antes de ejecutar — escribe en tu predicciones.md
 PedidoContext actualmente tiene 5 funciones: agregarPlato, quitarPlato, cambiarTipo, asignarMesa y limpiarPedido. ¿Cuál es el tipo exacto de cada parámetro según los modelos en types/index.ts?
-agregarPlato recibe: ___________
-quitarPlato recibe: ___________
-cambiarTipo recibe: ___________
-asignarMesa recibe: ___________
-limpiarPedido recibe: ___________
+1. agregarPlato recibe:
+(Paolo) plato: Plato
+2. quitarPlato recibe: 
+(Paolo) platoId: string
+3. cambiarTipo recibe: 
+(Paolo) tipo: TipoPedido
+4. asignarMesa recibe: 
+(Paolo) mesaId: string
+5. limpiarPedido recibe: 
+(Paolo) no recibe ningun parametro
