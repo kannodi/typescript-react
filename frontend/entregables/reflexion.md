@@ -8,6 +8,10 @@ Anota la respuesta en tu reflexion.md (sección Bloque A).
 1. la instalacion fue algo confusa ya que habia que configurar el tsconfig.json para que funcionara correctamente con react, entre tanto codigo que tenia no sabia que modificar al inicio
 2. La mayoria no la tengo claro pero hay 3 importantes que me acuerdo bien, el primero es el strict, este para supervisar bien, el segundo es el jsx, que lo deja poder entender react y el tercero me lo recordo el agente, el noEmit, le dice a ts que solo busque errores y deje que VITE construya la app
 
+(Joel)
+1. al principio fue algo confuso configurar el tsconfig.json ya que habia mucho codigo y no sabia que modificar para que funcionara correctamente con React.
+2. La opción "moduleResolution". No entiendo muy bien cómo afecta la manera en la que TypeScript busca y encuentra los archivos que importo.
+
 
 # ⏱ Feedback 30 segundos — Bloque B
 Anota en reflexion.md sección B:
@@ -56,5 +60,9 @@ Escribir en reflexion.md sección 'Cierre del día':
  (Paolo) 
  1. El concepto mas complejo para mi fue el como configurar los archivos al inicio para que ts funcione con react, la mayoria de la configuracion inicial fue compleja, ya luego solo fue ir dando los tipos de valores a los datos enviados/esperados de nuestros componentes
  2. La ventaja que veo es que ts a comparacion de js podemos encontrar los errores al momento de compilar codigo y no en la ejecucion del programa
+## Errores al final del bloque F : 36
 
+ (Joel)
+1. Me costó más entender cómo tipar correctamente los retornos de las funciones y el manejo de Promesas.
+2. La ventaja más concreta que vi frente a JavaScript puro fue poder detectar errores de escritura directamente en el editor antes de ejecutar la aplicación, además de tener autocompletado seguro.
 ## Errores al final del bloque F : 36
