@@ -10,7 +10,9 @@ Tipos que se repiten:
 ✍  Antes de ejecutar — escribe en tu predicciones.md
 ¿Cuántas interfaces/types duplicados hay en total en api.ts, PlatoCard.tsx y MesaCard.tsx que vas a eliminar en este bloque?
 Cantidad de declaraciones duplicadas que vas a eliminar: ___
-Tipos que se van a eliminar de api.ts: _________________________________
+Tipos que se van a eliminar de api.ts: 
+
+(Paolo) Hay alrededor de 7 tipos, ahora quitaremos las interfaces de cada archivo y empezaremos a importar las interfaces desde index.ts
 
 # Predicción C
 ✍  Antes de ejecutar — escribe en tu predicciones.md
