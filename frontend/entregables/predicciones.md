@@ -1,91 +1,20 @@
 # Predicción A
-✍ Antes de ejecutar — escribe en tu predicciones.md
-
-¿Qué archivo generará el comando de instalación además de actualizar package.json?
-
-¿Qué opciones del tsconfig.json son específicas para React con JSX?
-
-(Paolo)Escribe tu respuesta aquí: 
-1. se actualizara package y package lock, el primero para las versiones y el segundo para las versiones de las dependencias usadas tambien, asi si joel clona el proyecto funcionara exactamente igual que en mi pc.
-2. Las mas importante revisando el documento son     "jsx": "react-jsx" y el strict, el primero para que entienda que trabajara con la version +17 de react y la segunda para activar el supervisor de typescript, asi encontramos errores antes de ejecutar el proyecto.
-
-(Joel)Escribe tu respuesta aquí: 
-1. Ademas de actualizar el package.json se creara el archivo tsconfig.json que es el archivo de configuracion de typescript.
-2. Las opciones mas importantes son:
-    - "jsx": "react-jsx" -> Esto sirve para que typescript entienda que trabajara con react.
-    - "strict": true -> Con esto typescript activa el supervisor de typescript de modo que localize los errores antes de ejecutar el proyecto.
+✍  Antes de ejecutar — escribe en tu predicciones.md
+¿Qué archivos del proyecto actual ya tienen declaradas interfaces que van a quedar duplicadas cuando crees types/index.ts? Listarlos antes de continuar.
+Archivos con tipos duplicados: _________________________________
+Tipos que se repiten: _________________________________
 
 # Predicción B
-✍ Antes de ejecutar — escribe en tu predicciones.md
-¿Cuántos archivos vas a renombrar en total? Lista sus nombres.
-¿En qué tipo de líneas crees que aparecerá el primer error TS?
-
-(Paolo)Escribe tu respuesta aquí: 
-1. En total serian 11 NavBar, PlatoCard, MesaCard, MenuPage, MesasPage, CarritoPage, DetalleMesa, NotFound, PedidoContext, App, main
-2. En todas las lineas donde llamamos parametros sin especificar el tipo de valor, mas de 20 creo
-
-(Joel)Escribe tu respuesta aquí: 
-1. Los archivos a renombrar son los siguientes:
-    - NavBar.jsx -> NavBar.tsx
-    - PlatoCard.jsx -> PlatoCard.tsx
-    - MesaCard.jsx -> MesaCard.tsx
-    - MenuPage.jsx -> MenuPage.tsx
-    - MesasPage.jsx -> MesasPage.tsx
-    - CarritoPage.jsx -> CarritoPage.tsx
-    - DetalleMesa.jsx -> DetalleMesa.tsx
-    - NotFound.jsx -> NotFound.tsx
-    - PedidoContext.jsx -> PedidoContext.tsx
-    - App.jsx -> App.tsx
-    - main.jsx -> main.tsx
-
-2. Los errores apareceran en todas las lineas donde los parametros no tengan un tipo de valor asignado (ej: number, string, boolean, object, array, etc).
+✍  Antes de ejecutar — escribe en tu predicciones.md
+¿Cuántas interfaces/types duplicados hay en total en api.ts, PlatoCard.tsx y MesaCard.tsx que vas a eliminar en este bloque?
+Cantidad de declaraciones duplicadas que vas a eliminar: ___
+Tipos que se van a eliminar de api.ts: _________________________________
 
 # Predicción C
-✍ Antes de modificar PlatoCard.tsx — escribe en predicciones.md
-El componente PlatoCard recibe un plato como prop. ¿Qué propiedades tiene un plato según el modelo de datos del sistema?
-¿Qué tipo TypeScript corresponde a cada una? Escríbelo aquí antes de ver el código:
-_id:          ___________
-nombre:       ___________
-precio:       ___________
-categoria:    ___________
-disponible:   ___________
-
-(Paolo) plato tiene el siguiente segun el backend que obtenemos de railway:
-_id:          string
-nombre:       string
-precio:       number
-stock:        number
-categoria:    string
-
-(Joel) Las propiedades del plato son las siguientes: 
-
-- _id:          string
-- nombre:       string
-- descripcion:  string
-- precio:       number
-- categoria:    string
-- disponible:   boolean
-
-
-
-# Predicción D
-✍ Antes de modificar — escribe en predicciones.md
-¿Qué props recibe MesaCard? (mira tu implementación de días anteriores)
-¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
-Respuesta: 
-
-(Paolo) MesaCard recibe id, numero, estado, antes comensales y capacidad tambien pero ya no.
-Primero declaramos el tipo de retorno y ya podra inferir que tipo es
-
-(Joel) los props que recibe MesaCard son id, numero y estado.
-No, no puede inferir el tipo de retorno de una funcion que retorna JSX sin que lo declares.
-
-# Predicción E
-✍ Antes de modificar api.js — escribe en predicciones.md
-Si getMesas() retorna Promise<Mesa[]>, ¿qué tipo tiene 'mesas' en este código?
-  const mesas = await getMesas();
-Respuesta: mesas es de tipo ___________
-
-(Joel) mesas es de tipo Mesa[]
-
-(Paolo) el getmesas devuelve una promesa ya que es lo trae una funcion asincrona, las mesas que trae viene en array []
+✍  Antes de ejecutar — escribe en tu predicciones.md
+PedidoContext actualmente tiene 5 funciones: agregarPlato, quitarPlato, cambiarTipo, asignarMesa y limpiarPedido. ¿Cuál es el tipo exacto de cada parámetro según los modelos en types/index.ts?
+agregarPlato recibe: ___________
+quitarPlato recibe: ___________
+cambiarTipo recibe: ___________
+asignarMesa recibe: ___________
+limpiarPedido recibe: ___________
