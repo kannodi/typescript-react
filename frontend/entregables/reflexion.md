@@ -5,7 +5,7 @@
 # ⏱ Feedback 30 segundos — Bloque B
 • ¿Qué pasa con el autocompletado en el IDE ahora que los tipos están en un solo lugar?
 • Anota en reflexion.md sección B.
-
+(Paolo) Ahora que esta todo en un solo lugar, el ide puede dar mejores sugerencias al escribir codigo, ahora puede rellenar datos de forma mas facil que antes no podia, le dificultaba
 # ⏱ Feedback 30 segundos — Bloque C
 • ¿Qué error de runtime podría haberse producido sin el guard if (!context) throw? Piensa en un escenario concreto.
 • Anota en reflexion.md sección C.
