@@ -9,7 +9,7 @@
 # ⏱ Feedback 30 segundos — Bloque C
 • ¿Qué error de runtime podría haberse producido sin el guard if (!context) throw? Piensa en un escenario concreto.
 • Anota en reflexion.md sección C.
-
+(Paolo)Si agregamos un componente nuevo que llame al context y este no lo encierra en app.tsx, la app colapsaria al intentar leer propiedades de un contexto inexistente, daria undefined y cargaria la pagina en blanco
 
 # ⏱  Bloque D
 ✓  El par hizo al menos 3 preguntas a Claude y discutió las respuestas
