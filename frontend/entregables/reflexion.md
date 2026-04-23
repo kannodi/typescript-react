@@ -1,7 +1,7 @@
 # ⏱ Feedback 30 segundos — Bloque A
 • ¿Tiene sentido tener un único archivo de tipos? ¿Qué ventaja concreta ves frente a declarar los tipos en cada componente?
 • Anota en reflexion.md sección A.
-
+(Paolo)Si, es tener mejor un solo archivo donde se concentre todo acerca de las interfaces y types, la ventaja es tener todo mas ordenado + 
 # ⏱ Feedback 30 segundos — Bloque B
 • ¿Qué pasa con el autocompletado en el IDE ahora que los tipos están en un solo lugar?
 • Anota en reflexion.md sección B.
