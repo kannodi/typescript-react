@@ -6,6 +6,17 @@ Archivos con tipos duplicados:
 Tipos que se repiten: 
 (Paolo) Los tipos que creamos ayer Interface Mesa y la interface Plato
 
+
+(Joel)
+Archivos con tipos duplicados:
+- api.ts (tiene interfaces para Mesa, Plato, PedidoItem)
+- PlatoCard.tsx (tiene su propia interfaz Plato)
+- MesaCard.tsx (tiene su propia interfaz Mesa)
+Tipos que se repiten:
+- Interfaz Mesa
+- Interfaz Plato
+
+
 # Predicción B
 ✍  Antes de ejecutar — escribe en tu predicciones.md
 ¿Cuántas interfaces/types duplicados hay en total en api.ts, PlatoCard.tsx y MesaCard.tsx que vas a eliminar en este bloque?
@@ -13,6 +24,14 @@ Cantidad de declaraciones duplicadas que vas a eliminar: ___
 Tipos que se van a eliminar de api.ts: 
 
 (Paolo) Hay alrededor de 7 tipos, ahora quitaremos las interfaces de cada archivo y empezaremos a importar las interfaces desde index.ts
+
+(Joel) 
+Cantidad de declaraciones duplicadas que vas a eliminar: 3
+Tipos que se van a eliminar de api.ts: 
+- Tipo Mesa
+- Tipo Plato
+- Tipo PedidoItem
+
 
 # Predicción C
 ✍  Antes de ejecutar — escribe en tu predicciones.md
@@ -27,3 +46,12 @@ PedidoContext actualmente tiene 5 funciones: agregarPlato, quitarPlato, cambiarT
 (Paolo) mesaId: string
 5. limpiarPedido recibe: 
 (Paolo) no recibe ningun parametro
+
+
+(Joel)
+PedidoContext actualmente tiene 5 funciones:
+1. agregarPlato recibe: plato: Plato
+2. quitarPlato recibe: platoId: string
+3. cambiarTipo recibe: tipo: TipoPedido
+4. asignarMesa recibe: mesaId: string
+5. limpiarPedido recibe: No recibe ningun parametro
