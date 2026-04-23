@@ -7,8 +7,8 @@
 • Anota en reflexion.md sección B.
 (Paolo) Ahora que esta todo en un solo lugar, el ide puede dar mejores sugerencias al escribir codigo, ahora puede rellenar datos de forma mas facil que antes no podia, le dificultaba
 # ⏱ Feedback 30 segundos — Bloque C
-Anota en reflexion.md sección C:
-• ¿El tipado de 'onAgregar' fue lo que esperabas?  ¿Qué significa '(plato: Plato) => void'?
+• ¿Qué error de runtime podría haberse producido sin el guard if (!context) throw? Piensa en un escenario concreto.
+• Anota en reflexion.md sección C.
 
 
 # ⏱  Bloque D
