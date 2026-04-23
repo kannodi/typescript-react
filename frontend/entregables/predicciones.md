@@ -1,8 +1,10 @@
 # Predicción A
 ✍  Antes de ejecutar — escribe en tu predicciones.md
 ¿Qué archivos del proyecto actual ya tienen declaradas interfaces que van a quedar duplicadas cuando crees types/index.ts? Listarlos antes de continuar.
-Archivos con tipos duplicados: _________________________________
-Tipos que se repiten: _________________________________
+Archivos con tipos duplicados: 
+(Paolo) Quedaran duplicados los archivos que hicimos el dia de ayer MesaCard.tsx y PlatoCard.tsx
+Tipos que se repiten: 
+(Paolo) Los tipos que creamos ayer Interface Mesa y la interface Plato
 
 # Predicción B
 ✍  Antes de ejecutar — escribe en tu predicciones.md
