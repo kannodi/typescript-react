@@ -1,14 +1,7 @@
 import { usePedido, PedidoItem } from '../context/PedidoContext';
-interface Plato {
-  _id: string;
-  nombre: string;
-  precio: number;
-  stock: number;
-  categoria: string;
-}
-interface PlatoCardProps {
-  plato: Plato;
-}
+import { PlatoCardProps } from '../types';
+
+
 
 function PlatoCard({ plato }: PlatoCardProps) {
 

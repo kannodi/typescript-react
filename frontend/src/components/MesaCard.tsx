@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom'
-type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fueradeservicio'
+import { Mesa } from '../types'
 
-interface MesaCardProps {
-  id: string;
-  numero: number;
-  estado: EstadoMesa;
-}
-function MesaCard({ id, numero, estado }: MesaCardProps) {
+function MesaCard({ id, numero, estado }: Mesa) {
   return (
     <div className='p-10 flex flex-col items-center' >
       <Link to={`/mesas/${id}`} className='text-black hover:underline  text-bold text-2xl'>Ver detalle </Link>

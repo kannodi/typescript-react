@@ -1,32 +1,6 @@
 import axios from 'axios';
-// -------- backend aun inexistente
-type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
-type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada' | 'cancelada' | 'cerrada';
-type TipoPedido = 'mesa' | 'para_llevar';
-export interface Mesa {
-    _id: string;
-    numero: number;
-    capacidad: number;
-    estado: EstadoMesa;
-    pedidoActivoId?: string | null;
-}
-// Interfaz para el Pedido completo
-export interface Pedido {
-    _id: string;
-    mesaId: string | null;
-    tipo: TipoPedido;
-    estado: EstadoPedido;
-    items: any[]; // Luego lo detallamos más
-    total: number;
-    createdAt: string;
-}// --------
-export interface Plato {
-    _id: string;
-    nombre: string;
-    precio: number;
-    stock: number;
-    categoria: string;
-}
+import { Mesa, Pedido, EstadoPedido } from '../types';
+
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 console.log(BASE_URL);
 

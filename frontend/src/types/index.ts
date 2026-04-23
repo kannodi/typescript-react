@@ -5,14 +5,14 @@
 // 1. Estados (Union Types)
 export type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
 export type TipoPedido = 'mesa' | 'para_llevar';
-export type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada' | 'cancelada' | 'cerrada';
+export type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada' | 'cancelada';
 
 // 2. Interfaces Base (Modelos de Base de Datos)
 export interface Mesa {
-    _id: string;
+    id: string;
     numero: number;
-    capacidad: number;
     estado: EstadoMesa;
+    capacidad?: number;
     pedidoActivoId?: string | null;
 }
 
@@ -23,7 +23,10 @@ export interface Plato {
     stock: number;
     categoria: string;
 }
-
+//para platocard (el contador)
+export interface PlatoCardProps {
+    plato: Plato;
+}
 // 3. Interfaces del Pedido
 export interface PedidoItem {
     platoId: string;
