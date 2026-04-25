@@ -39,19 +39,31 @@ Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
 
 1. ¿Qué archivo creamos hoy que no existía antes? ¿Para qué sirve?
 (Paolo)El dia de hoy creamos el archivo types/index.ts, sirve para centralizar todos los tipos y interfaces que se usan en la aplicacion, ahora para usar los tipos en diferentes archivos solo hace exportar la interfaz o type que este necesita
+(Joel) Archivo creado: types/index.ts
+Lo que hace este archivo es almacenar las interfaces y los unión types para recurrir a ellos cada que sean necesarios desde cualquier archivo tsx.
+
 2. Abre el archivo types/index.ts. Sin leerlo, ¿puedes listar de memoria
    cuántos types y cuántas interfaces hay? ¿Cuál es la diferencia entre ellos?
 (Paolo)Tenemos alredeodr de 6 interfaces y 3 types.  
+(Joel) Hay 3 types y 5 interfaces. La diferencia es que las interfaces son para objetos con atributos y los types son para union types.
+
 3. ¿Por qué PedidoContext usa createContext<PedidoContextType | undefined>
    en lugar de createContext<PedidoContextType>? Explícalo sin código.
 (Paolo)Con undefined nos aseguramos de que typescript piense que habra datos en el contexto en el futuro, en caso de que no usemos undefined, tendriamos que pasarle al contexto un objeto que cumpla con la interface en ese instante
+(Joel) El Context de React es una herramienta que nos ayuda a compartir datos entre componentes sin necesidad de pasar props de forma manual. Para que un Context sea utilizable en algun componente, este debe tener un "valor inicial". En nuestro caso, al momento de inicializar el Context, no teniamos informacion que mostrar, por lo que optamos por colocar undefined como valor inicial.
+
 4. Si mañana el backend agrega un campo activo: boolean a Mesa,
    ¿en cuántos archivos tienes que hacer el cambio? ¿Cómo TypeScript
    te va a avisar dónde falta el campo?
 (Paolo) Si se agrega un campo activo, se edita index.ts se agrega la mesa con tipo boolean y en caso sea necesario se agregan los imports en cada archivo que la use. ts me avisara en caso de estar agregar o usar la mesa y no haya pasado ese campo nuevo
+(Joel) En caso de que el Backend tenga aquel campo activo lo que se haría seria editar los siguientes archivo: index.ts (editar interface), MesaCard.tsx (llamar al nuevo campo) y DetallesMesa.tsx (Mostrar el nuevo campo). Si falta un campo en alguno de esos archivos, TypeScript nos avisara de ello al momento de ejecutar el codigo.
+
 5. ¿Qué hace el hook usePedido()? ¿Por qué es mejor que llamar
    useContext(PedidoContext) directamente en cada componente?
 (Paolo) Gracias al hook usepedido nos aseguramos que al momento de usar el contexto haya un seguro de intermediario, en caso de no encontrarlo, nos avisara con un error. Si llamaramos el usecontext tendriamos que hacer un if de verificacion siempre, eso nos haria escribir mas codigo
+(Joel) El Hook usePedido() se encarga de contener las funciones a las que recurrira el programa (agregar, quitar, limpiar, etc) de modo que mas de un archivo recurra a las funciones requeridas desde ahí. El fin de esto es que a lahora de hacer correcciones solo se tenga que corregir las funciones de un solo archivo en lugar de tener que corregir la misma función en cada archivo.
+
+
 # CRITERIO 
 ✓  Ambas personas respondieron todas las preguntas (puede ser con ayuda del código)
 ✓  Las respuestas a las preguntas 3 y 5 fueron sin leer directamente el código
