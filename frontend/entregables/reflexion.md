@@ -28,20 +28,20 @@ Ronda 1 (12 min): Persona A explica. Persona B hace las preguntas de abajo.
 Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
 
 1. ¿Qué archivo creamos hoy que no existía antes? ¿Para qué sirve?
-
+(Paolo)El dia de hoy creamos el archivo types/index.ts, sirve para centralizar todos los tipos y interfaces que se usan en la aplicacion, ahora para usar los tipos en diferentes archivos solo hace exportar la interfaz o type que este necesita
 2. Abre el archivo types/index.ts. Sin leerlo, ¿puedes listar de memoria
    cuántos types y cuántas interfaces hay? ¿Cuál es la diferencia entre ellos?
-
+(Paolo)Tenemos alredeodr de 6 interfaces y 3 types.  
 3. ¿Por qué PedidoContext usa createContext<PedidoContextType | undefined>
    en lugar de createContext<PedidoContextType>? Explícalo sin código.
-
+(Paolo)Con undefined nos aseguramos de que typescript piense que habra datos en el contexto en el futuro, en caso de que no usemos undefined, tendriamos que pasarle al contexto un objeto que cumpla con la interface en ese instante
 4. Si mañana el backend agrega un campo activo: boolean a Mesa,
    ¿en cuántos archivos tienes que hacer el cambio? ¿Cómo TypeScript
    te va a avisar dónde falta el campo?
-
+Si se agrega un campo activo, se edita index.ts se agrega la mesa con tipo boolean y en caso sea necesario se agregan los imports en cada archivo que la use. ts me avisara en caso de estar agregar o usar la mesa y no haya pasado ese campo nuevo
 5. ¿Qué hace el hook usePedido()? ¿Por qué es mejor que llamar
    useContext(PedidoContext) directamente en cada componente?
-
+Gracias al hook usepedido nos aseguramos que al momento de usar el contexto haya un seguro de intermediario, en caso de no encontrarlo, nos avisara con un error. Si llamaramos el usecontext tendriamos que hacer un if de verificacion siempre, eso nos haria escribir mas codigo
 # CRITERIO 
 ✓  Ambas personas respondieron todas las preguntas (puede ser con ayuda del código)
 ✓  Las respuestas a las preguntas 3 y 5 fueron sin leer directamente el código
