@@ -1,5 +1,5 @@
-import { usePedido, PedidoItem } from '../context/PedidoContext';
-import { PlatoCardProps } from '../types';
+import { usePedido } from '../context/PedidoContext';
+import { PlatoCardProps, PedidoItem } from '../types';
 
 
 

@@ -48,7 +48,7 @@ Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
 4. Si mañana el backend agrega un campo activo: boolean a Mesa,
    ¿en cuántos archivos tienes que hacer el cambio? ¿Cómo TypeScript
    te va a avisar dónde falta el campo?
-(Paolo)Si se agrega un campo activo, se edita index.ts se agrega la mesa con tipo boolean y en caso sea necesario se agregan los imports en cada archivo que la use. ts me avisara en caso de estar agregar o usar la mesa y no haya pasado ese campo nuevo
+(Paolo) Si se agrega un campo activo, se edita index.ts se agrega la mesa con tipo boolean y en caso sea necesario se agregan los imports en cada archivo que la use. ts me avisara en caso de estar agregar o usar la mesa y no haya pasado ese campo nuevo
 5. ¿Qué hace el hook usePedido()? ¿Por qué es mejor que llamar
    useContext(PedidoContext) directamente en cada componente?
 (Paolo) Gracias al hook usepedido nos aseguramos que al momento de usar el contexto haya un seguro de intermediario, en caso de no encontrarlo, nos avisara con un error. Si llamaramos el usecontext tendriamos que hacer un if de verificacion siempre, eso nos haria escribir mas codigo
@@ -61,3 +61,10 @@ Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
 • ¿Qué concepto de TypeScript te costó más entender hoy?
 • ¿Qué ventaja concreta viste de centralizar los tipos en types/index.ts?
 • Total de errores TypeScript al cierre del Día 2: ___ (los eliminaremos mañana)
+(Paolo) me costo mas el concepto de union types, entender como funciona
+(Paolo) la ventaja es tener todo mas ordenado y no repetir tipos en diferentes archivos
+
+
+
+
+## Total de errores: 37
