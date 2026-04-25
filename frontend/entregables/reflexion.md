@@ -73,10 +73,10 @@ Lo que hace este archivo es almacenar las interfaces y los unión types para rec
 • ¿Qué concepto de TypeScript te costó más entender hoy?
 • ¿Qué ventaja concreta viste de centralizar los tipos en types/index.ts?
 • Total de errores TypeScript al cierre del Día 2: ___ (los eliminaremos mañana)
-(Paolo) me costo mas el concepto de union types, entender como funciona
-(Paolo) la ventaja es tener todo mas ordenado y no repetir tipos en diferentes archivos
-
-
+(Paolo) me costo mas el concepto de union types, entender como funciona.
+(Joel) Lo que me cuesta entender es la separacion de index.ts y el pedido context, no entiendo si no seria mejor recurrir a los recursos de cada uno desde un mismo archivo.
+(Paolo) la ventaja es tener todo mas ordenado y no repetir tipos en diferentes archivos.
+(Joel) Optimiza la cantidad de lineas de codigo, ya que solo se importa desde un archivo.
 
 
 ## Total de errores: 37
