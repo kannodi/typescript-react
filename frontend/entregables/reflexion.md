@@ -14,7 +14,10 @@
 # ⏱  Bloque D
 ✓  El par hizo al menos 3 preguntas a Claude y discutió las respuestas
 ✓  reflexion.md sección D tiene anotado al menos un concepto nuevo que aprendieron
-
+--- 
+(Paolo) La pregunta numero 1 nos ayuda acomprender como funciona nuestros union types, el type que implementamos es como una lista blanca de lo que puede llegar.
+(Paolo) En la pregunta 4 aprendi como añadir un tipo adicional pero sin tocar la interface principal, usando el simbolo &, es como añadirle propiedades a una interface ya creada.
+(Paolo) En la pregunta 5 me enseño como actuar en caso de que el backend cambie, en el caso que se agregue foto?, ahora debo editar index.ts y agregar un foto? con tipo string.
 # ⏱   Bloque E - EVALUACION ENTRE PARES 🔄 Instrucciones para la evaluación
 Ronda 1 (12 min): Persona A explica. Persona B hace las preguntas de abajo.
 Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
@@ -43,4 +46,3 @@ Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
 • ¿Qué concepto de TypeScript te costó más entender hoy?
 • ¿Qué ventaja concreta viste de centralizar los tipos en types/index.ts?
 • Total de errores TypeScript al cierre del Día 2: ___ (los eliminaremos mañana)
-• Anota en reflexion.md sección "Cierre del día".
