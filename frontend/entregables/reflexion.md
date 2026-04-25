@@ -1,15 +1,20 @@
 # ⏱ Feedback 30 segundos — Bloque A
 • ¿Tiene sentido tener un único archivo de tipos? ¿Qué ventaja concreta ves frente a declarar los tipos en cada componente?
 • Anota en reflexion.md sección A.
-(Paolo)Si, es tener mejor un solo archivo donde se concentre todo acerca de las interfaces y types, la ventaja es tener todo mas ordenado + 
+(Paolo)Si, es tener mejor un solo archivo donde se concentre todo acerca de las interfaces y types, la ventaja es tener todo mas ordenado +
+(Joel) Si, es lo mas optimo porque el codigo esta mas organizado y si se requiere hacer un cambio en una interfaz, no habria necesidad de hacerlo en varios archivos, solo seria en el archivo de tipos.
+
 # ⏱ Feedback 30 segundos — Bloque B
 • ¿Qué pasa con el autocompletado en el IDE ahora que los tipos están en un solo lugar?
 • Anota en reflexion.md sección B.
 (Paolo) Ahora que esta todo en un solo lugar, el ide puede dar mejores sugerencias al escribir codigo, ahora puede rellenar datos de forma mas facil que antes no podia, le dificultaba
+(Joel) Ahora el autocompletado es mas rapido y eficiente, ademas de que el IDE puede detectar errores en tiempo de ejecucion, lo que facilita el debugging.
+
 # ⏱ Feedback 30 segundos — Bloque C
 • ¿Qué error de runtime podría haberse producido sin el guard if (!context) throw? Piensa en un escenario concreto.
 • Anota en reflexion.md sección C.
 (Paolo)Si agregamos un componente nuevo que llame al context y este no lo encierra en app.tsx, la app colapsaria al intentar leer propiedades de un contexto inexistente, daria undefined y cargaria la pagina en blanco
+(Joel) Si no hubiesemos puesto el guard if (!context) throw, la aplicacion mostraria errores de tipado al intentar usar el contexto sin haber sido inicializado, lo que provocaria que la pagina no cargue correctamente.
 
 # ⏱  Bloque D
 ✓  El par hizo al menos 3 preguntas a Claude y discutió las respuestas
