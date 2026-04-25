@@ -23,6 +23,16 @@
 (Paolo) La pregunta numero 1 nos ayuda acomprender como funciona nuestros union types, el type que implementamos es como una lista blanca de lo que puede llegar.
 (Paolo) En la pregunta 4 aprendi como añadir un tipo adicional pero sin tocar la interface principal, usando el simbolo &, es como añadirle propiedades a una interface ya creada.
 (Paolo) En la pregunta 5 me enseño como actuar en caso de que el backend cambie, en el caso que se agregue foto?, ahora debo editar index.ts y agregar un foto? con tipo string.
+
+(Joel)
+1. Qué beneficio inmediato notaste al tipar las Props de un componente en lugar de usar JavaScript puro?
+Rpta: El beneficio más evidente es el autocompletado y la validación en tiempo de ejecución de desarrollo. Al definir una interface para las Props, VS Code me avisa inmediatamente si olvidé pasar un atributo obligatorio o si el tipo de dato es incorrecto (por ejemplo, pasar un string donde se esperaba un number), evitando errores que en JS vanilla solo vería al romper la aplicación en el navegador. 
+2. Qué sucedió con el tipado de eventos (ej. onChange o onClick) en esta sección?
+Rpta: Aprendí que React proporciona tipos específicos como React.ChangeEvent<HTMLInputElement> o React.MouseEvent. Usar estos tipos es crucial porque nos permite acceder a propiedades específicas del evento (como event.target.value) con total seguridad de que TypeScript reconoce que existen en ese contexto.
+3. Qué sucedió al intentar asignar un valor que no estaba en el union type?
+Rpta: TypeScript generó un error indicando que el tipo string no es asignable al tipo EstadoMesa. Esto es muy útil porque garantiza que la lógica visual del componente (colores de las cards) solo responda a estados reales definidos en el contrato de datos del sistema.
+
+
 # ⏱   Bloque E - EVALUACION ENTRE PARES 🔄 Instrucciones para la evaluación
 Ronda 1 (12 min): Persona A explica. Persona B hace las preguntas de abajo.
 Ronda 2 (12 min): Invierten. Persona B explica. Persona A hace las preguntas.
