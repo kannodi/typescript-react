@@ -15,3 +15,5 @@
 # ⏱  Feedback 30 segundos — Bloque C
 • ¿El comportamiento de useParams te sorprendió? ¿Por qué el genérico no garantiza el tipo?
 • Anota en reflexion.md sección C.
+
+(Paolo) Me confundio un tanto el entender como el generico ya usaba el undefined, pero entendi que esto se hace asi por los creadores de react router, para luego crear un guard y filtrarlo solo por string, asi cuando usemos el id sabemos que si o si es un string y no colapsaria
