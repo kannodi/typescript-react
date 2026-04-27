@@ -19,4 +19,5 @@ CarritoPage usa pedido del Context para construir el body del POST. ¿Cuántos c
 Campos que van en el body: ___________
 Campos que NO van (los excluye Omit): ___________
 
-(Paolo) 
+(Paolo) Lo que va en el body es: mesaId,tipo,estado ,items y total
+(Paolo) lo que excluimos con omit son el id y el createdat del backend
