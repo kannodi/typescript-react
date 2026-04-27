@@ -21,3 +21,7 @@ Campos que NO van (los excluye Omit): ___________
 
 (Paolo) Lo que va en el body es: mesaId,tipo,estado ,items y total
 (Paolo) lo que excluimos con omit son el id y el createdat del backend
+
+(Joel)
+Campos que van en el body: mesaId, tipo, estado, items y total
+Campos que NO van (los excluye Omit): id, createdAt, y updatedAt

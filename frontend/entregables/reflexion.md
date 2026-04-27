@@ -10,3 +10,4 @@
 
 (Paolo) El concepto es facil de comprender pero al usarlo no tanto, en el proyecto lo usamos para enviar un pedido body exceptuando el id y el createdat. En otro contexto, si quiero mostrar mi usuario y esta dentro de un objeto que tenga usuario y contraseña, solo hago omit contraseña.
 
+(Joel) Entender como funcione fue sencillo, en este caso lo usamos para no enviar el id y el created_at del pedido; usaria omit para quitar el password de usuario en el frontend.
