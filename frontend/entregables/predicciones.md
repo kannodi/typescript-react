@@ -32,4 +32,5 @@ useParams<{ mesaId: string }>() — ¿el campo mesaId del objeto retornado tiene
 Tipo de mesaId después de useParams<{ mesaId: string }>(): ___________
 ¿Necesitas un guard de undefined o TypeScript ya garantiza que es string? ___________
 
-(Paolo) 
+(Paolo) despues de useparams es string | undefined, porque podrian ingresar a la url sin id y dar undefined
+(Paolo) Luego del guard ts ya puede inferir que solo esperamos strings
