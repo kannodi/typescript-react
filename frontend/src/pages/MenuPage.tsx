@@ -1,22 +1,24 @@
 import { useState, useEffect } from 'react';
 import { getPlatos } from '../services/api';
-export default function MenuPage() {
-    const [platos, setPlatos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+import { Plato } from '../types';
 
+export default function MenuPage() {
+    const [platos, setPlatos] = useState<Plato[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
     useEffect(() => {
-        async function cargarMenu() {
+        const cargarMenu = async (): Promise<void> => {
             try {
                 setLoading(true);
-                const data = await getPlatos();
+                const data: Plato[] = await getPlatos();
                 setPlatos(data);
-            } catch (err) {
-                setError(err.message);
+            } catch (err: unknown) {
+                const mensaje = err instanceof Error ? err.message : "Error desconocido";
+                setError(mensaje);
             } finally {
                 setLoading(false);
             }
-        }
+        };
         cargarMenu();
     }, []);
 
@@ -28,7 +30,7 @@ export default function MenuPage() {
 
             <h2 className="bg-blue-400 text-white text-2xl font-bold p-2 rounded-xl mb-2">Menú del Restaurante</h2>
 
-            {platos.map(plato => (
+            {platos.map((plato: Plato) => (
                 <div className='grid grid-cols-4 p-2 bg-gray-100 rounded-xl' key={plato._id}>
                     <strong className='px-2 py-1'>{plato.nombre}</strong>
                     <span className='bg-blue-100 rounded-full px-3 p-1 text-blue-500 w-fit'>{plato.categoria}</span>

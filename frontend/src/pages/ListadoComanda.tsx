@@ -3,32 +3,34 @@ import { getPlatos, crearPedido, cambiarEstadoPedido } from '../services/api';
 import { usePedido } from '../context/PedidoContext';//importar context pedido
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Plato, Pedido } from '../types';
 
 export default function ListadoComanda() {
     // 1. TODOS los hooks (useState, usePedido) JUNTOS AL PRINCIPIO
     const navigate = useNavigate();
     const { agregarPlato, restarPlato, quitarPlatoPorIndice, limpiarPedido, pedido } = usePedido();
-    const [platos, setPlatos] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [enviando, setEnviando] = useState(false);
-    const [pedidoCreado, setPedidoCreado] = useState(null);
+    const [platos, setPlatos] = useState<Plato[]>([]);
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [enviando, setEnviando] = useState<boolean>(false);
+    const [pedidoCreado, setPedidoCreado] = useState<Pedido | null>(null);
 
     useEffect(() => {
-        async function cargarDatos() {
+        const cargarDatos = async (): Promise<void> => {
             try {
                 setLoading(true);
-                const data = await getPlatos();
+                const data: Plato[] = await getPlatos();
                 if (!Array.isArray(data)) {
-                    throw new Error("La respuesta de la API no es válida (verifica VITE_API_URL)");
+                    throw new Error("La respuesta de la API no es válida");
                 }
                 setPlatos(data);
-            } catch (err) {
-                setError(err.message);
+            } catch (err: unknown) {
+                const mensaje = err instanceof Error ? err.message : "Error al cargar datos";
+                setError(mensaje);
             } finally {
                 setLoading(false);
             }
-        }
+        };
         cargarDatos();
     }, []);
 
@@ -37,20 +39,24 @@ export default function ListadoComanda() {
 
     //SIMULACION DE PEDIDO ENVIADO
 
-    const handleEnviarComanda = async () => {
+    const handleEnviarComanda = async (): Promise<void> => {
         if (pedido.items.length === 0) return;
         setEnviando(true);
         setError(null);
         try {
-            const nuevoPedido = await crearPedido({
+            const body: Omit<Pedido, '_id' | 'createdAt'> = {
                 mesaId: pedido.mesaId,
                 tipo: pedido.tipo,
+                estado: 'pendiente',
                 items: pedido.items,
-            });
+                total: pedido.total,
+            };
+            const nuevoPedido: Pedido = await crearPedido(body);
             setPedidoCreado(nuevoPedido);
-            limpiarPedido();  // limpiar el Context después del éxito
-        } catch (err) {
-            setError('No se pudo crear el pedido. Intenta de nuevo.');
+            limpiarPedido();
+        } catch (err: unknown) {
+            const mensaje = err instanceof Error ? err.message : 'No se pudo crear el pedido.';
+            setError(mensaje);
         } finally {
             setEnviando(false);
         }
@@ -130,7 +136,7 @@ export default function ListadoComanda() {
                             <div className='flex justify-between items-center'>
                                 <button className='font-bold bg-gray-200 border border-gray-400 rounded-full px-3 py-1' onClick={() => restarPlato(item.platoId)}> - </button>
                                 <span>{item.cantidad}</span>
-                                <button className='font-bold bg-gray-200 border border-gray-400 rounded-full px-3 py-1' onClick={() => agregarPlato({ _id: item.platoId, nombre: item.nombre, precio: item.precioUnitario })}> + </button>
+                                <button className='font-bold bg-gray-200 border border-gray-400 rounded-full px-3 py-1' onClick={() => agregarPlato({ _id: item.platoId, nombre: item.nombre, precio: item.precioUnitario, stock: 0, categoria: '' })}> + </button>
                             </div>
                             <strong className='text-center'> S/ {item.precioUnitario * item.cantidad}</strong>
                             <button onClick={() => quitarPlatoPorIndice(index)}>🗑️</button>

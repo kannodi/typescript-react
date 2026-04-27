@@ -35,7 +35,7 @@ api.interceptors.response.use(
 // 4. Funciones
 
 // getPlatos AHORA USA `api` -> El interceptor le pondrá el token automáticamente
-export async function getPlatos() {
+export async function getPlatos(): Promise<Plato[]> {
     // Como la instancia ya tiene baseURL, solo ponemos la ruta relativa ('/menu')
     const response = await api.get<Plato[]>('/menu', {
         headers: {
@@ -64,7 +64,7 @@ export async function getPedido(id: string): Promise<Pedido> {
     return response.data;
 }
 
-export async function crearPedido(pedidoData: any): Promise<Pedido> {
+export async function crearPedido(pedidoData: Omit<Pedido, '_id' | 'estado' | 'createdAt'>): Promise<Pedido> {
     try {
         // Intento real al backend   // pedidoData: { mesaId, tipo, items[] }
         const response = await api.post<Pedido>('/pedidos', pedidoData);
