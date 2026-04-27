@@ -34,3 +34,7 @@ Tipo de mesaId después de useParams<{ mesaId: string }>(): ___________
 
 (Paolo) despues de useparams es string | undefined, porque podrian ingresar a la url sin id y dar undefined
 (Paolo) Luego del guard ts ya puede inferir que solo esperamos strings
+
+(Joel)
+1. Tipo de mesaId después de useParams<{ mesaId: string }>(): string | undefined
+2. El propio TS no lo garantiza, es por eso que se tiene que poner un guard para que ts sepa que solo esperamos strings
