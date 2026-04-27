@@ -9,7 +9,7 @@ export type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada
 
 // 2. Interfaces Base (Modelos de Base de Datos)
 export interface Mesa {
-    id: string;
+    _id: string;
     numero: number;
     estado: EstadoMesa;
     capacidad?: number;

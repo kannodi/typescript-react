@@ -35,7 +35,7 @@ export default function DetallesMesa() {
             } catch (err: unknown) {
                 console.warn("Falló getMesas, buscando en el mock");
                 // Si falla la red, buscamos en el mock local
-                const encontradaMock = mesasMock.find(m => String(m.id) === id) as unknown as Mesa ?? null;
+                const encontradaMock = mesasMock.find(m => String(m._id) === id) as unknown as Mesa ?? null;
                 setMesa(encontradaMock);
             } finally {
                 setCargando(false);
