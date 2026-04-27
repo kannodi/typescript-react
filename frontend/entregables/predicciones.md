@@ -21,3 +21,11 @@ Campos que NO van (los excluye Omit): ___________
 
 (Paolo) Lo que va en el body es: mesaId,tipo,estado ,items y total
 (Paolo) lo que excluimos con omit son el id y el createdat del backend
+
+# Predicción C
+✍  Antes de ejecutar — escribe en tu predicciones.md
+useParams<{ mesaId: string }>() — ¿el campo mesaId del objeto retornado tiene tipo string o string | undefined? Predice el tipo antes de probarlo.
+Tipo de mesaId después de useParams<{ mesaId: string }>(): ___________
+¿Necesitas un guard de undefined o TypeScript ya garantiza que es string? ___________
+
+(Paolo) 
