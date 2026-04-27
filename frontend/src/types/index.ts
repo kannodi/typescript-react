@@ -13,6 +13,7 @@ export interface Mesa {
     numero: number;
     estado: EstadoMesa;
     capacidad?: number;
+    comensales?: number;
     pedidoActivoId?: string | null;
 }
 
