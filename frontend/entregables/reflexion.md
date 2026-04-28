@@ -25,7 +25,8 @@
 • ¿Qué error fue el más difícil de resolver en los 3 días? ¿Por qué?
 
 (Joel) Al inicio habian alrededor de 100 errores, y actualmente ya no hay errores.
-
+(Paolo) Revisando el github y el historial de versiones, quedo documento que habian exactamente 105 errores, ahora son 0.
+Los mas complicados fueron errores que no estaban dentro del documento, estos los resolvimos con las explicaciones de antigravity
 
 # ⏱  Exploración con Claude - Bloque E  
 Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio — preguntas sobre cosas que no quedaron claras o que generan curiosidad sobre el siguiente paso.
