@@ -56,3 +56,6 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
 ✓  El par hizo al menos 3 preguntas y discutió las respuestas
 ✓  reflexion.md sección E tiene anotado al menos un concepto nuevo que aprendieron
 
+# ⏱  Feedback 30 segundos — Bloque F
+• ¿Qué parte del sprint cambiarías si lo hicieras de nuevo?
+• Navigator le pregunta al Driver: ¿qué es lo que más recuerdas de TypeScript después de estos 3 días?
