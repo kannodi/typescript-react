@@ -10,7 +10,7 @@ export default function LoginPage() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         setLoading(true);
         setError('');
@@ -19,8 +19,9 @@ export default function LoginPage() {
             localStorage.setItem('token', data.token);
             console.log('Login exitoso — token guardado');
             navigate('/menu');
-        } catch (err) {
-            setError(err.response?.data?.message || 'Credenciales incorrectas');
+        } catch (err: unknown) {
+            const mensaje = err instanceof Error ? err.message : 'Credenciales incorrectas';
+            setError(mensaje);
         } finally {
             setLoading(false);
         }

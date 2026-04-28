@@ -12,7 +12,7 @@ const MesasPage = () => {
     // 1. Tipamos los estados (Array de Mesas, booleanos y string)
     const [mesas, setMesas] = useState<Mesa[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
+    // const [error, setError] = useState<string | null>(null);
 
     const { asignarMesa, asignarParaLlevar } = usePedido();
     const navigate = useNavigate();
@@ -55,7 +55,7 @@ const MesasPage = () => {
     };
 
     if (loading) return <p className='p-6 text-gray-500'>Cargando mesas...</p>;
-    if (error) return <p className='p-6 text-red-500'>{error}</p>;
+    // if (error) return <p className='p-6 text-red-500'>{error}</p>;
 
     return (
         <>

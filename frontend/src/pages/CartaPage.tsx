@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import PlatoCard from '../components/PlatoCard';
 import { getPlatos } from '../services/api';
+import { Plato } from '../types';
 
 function CartaPage() {
-  const [platos, setPlatos] = useState([]);
+  const [platos, setPlatos] = useState<Plato[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function cargarPlatos() {
@@ -13,8 +14,9 @@ function CartaPage() {
         setLoading(true);
         const data = await getPlatos();
         setPlatos(data);
-      } catch (err) {
-        setError(err.message);
+      } catch (err: unknown) {
+        const mensaje = err instanceof Error ? err.message : 'Error desconocido';
+        setError(mensaje);
       } finally {
         setLoading(false);
       }

@@ -13,7 +13,7 @@ export default function DetallesMesa() {
     // 2. Estados tipados
     const [mesa, setMesa] = useState<Mesa | null>(null);
     const [cargando, setCargando] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
+    // const [error, setError] = useState<string | null>(null);
 
     // 3. Efecto para buscar la mesa
     useEffect(() => {
@@ -46,7 +46,7 @@ export default function DetallesMesa() {
     }, [id, navigate]); // Dependencias del useEffect
 
     if (cargando) return <p className='p-6'>Cargando...</p>;
-    if (error) return <p className='p-6 text-red-500'>Error: {error}</p>;
+    // if (error) return <p className='p-6 text-red-500'>Error: {error}</p>;
 
     // Si terminó de cargar y no hay mesa, mostramos el error
     if (!mesa) {

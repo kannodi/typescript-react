@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
-import { getPlatos, crearPedido, cambiarEstadoPedido } from '../services/api';
+import { getPlatos, crearPedido/*, cambiarEstadoPedido*/ } from '../services/api';
 import { usePedido } from '../context/PedidoContext';//importar context pedido
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Plato, Pedido } from '../types';
 
 export default function ListadoComanda() {
     // 1. TODOS los hooks (useState, usePedido) JUNTOS AL PRINCIPIO
-    const navigate = useNavigate();
     const { agregarPlato, restarPlato, quitarPlatoPorIndice, limpiarPedido, pedido } = usePedido();
     const [platos, setPlatos] = useState<Plato[]>([]);
     const [error, setError] = useState<string | null>(null);
