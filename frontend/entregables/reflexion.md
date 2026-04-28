@@ -54,5 +54,13 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
 ✓  reflexion.md sección E tiene anotado al menos un concepto nuevo que aprendieron
 
 # ⏱  Feedback 30 segundos — Bloque F
+✍  Escribe en reflexion.md — sección "Cierre de los 3 días"
+• ¿Qué concepto de TypeScript te resultó más difícil en los 3 días?
+• ¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?
+• ¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?
+• Total de errores al inicio del Día 1: ___  →  Total de errores hoy: 0
+• Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript: ___
+
+# ⏱  Feedback 30 segundos — Cierre
 • ¿Qué parte del sprint cambiarías si lo hicieras de nuevo?
 • Navigator le pregunta al Driver: ¿qué es lo que más recuerdas de TypeScript después de estos 3 días?
