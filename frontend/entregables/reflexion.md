@@ -17,3 +17,5 @@
 • Anota en reflexion.md sección C.
 
 (Paolo) Me confundio un tanto el entender como el generico ya usaba el undefined, pero entendi que esto se hace asi por los creadores de react router, para luego crear un guard y filtrarlo solo por string, asi cuando usemos el id sabemos que si o si es un string y no colapsaria
+
+(Joel) Si, me tomo por sorpresa, el genérico en useParams<T>() no garantiza el tipo de ejecución, mas bien es una ayuda para el desarrollador ya que TS no tiene control sobre los valores de la URL en tiempo de ejecución.
