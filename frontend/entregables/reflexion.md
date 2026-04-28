@@ -33,23 +33,57 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
 1. "Después de tipar 3 días el proyecto restaurante-frontend,
    ¿qué tipo de errores de runtime previene TypeScript y cuáles NO?
    Dame un ejemplo concreto de cada uno usando nuestro código."
+   (Joel) Los errores que previene son los de type error, por ejemplo al usar un string como number y viseversa; no obstante, no previene errores en tiempo de ejecucion, por ejemplo al crear una comanda y que el backend falle.
 
 2. "En DetalleMesa.tsx usamos useParams<{ mesaId: string }>() pero
    mesaId sigue siendo string | undefined. ¿Por qué el genérico no
    garantiza que es string? ¿Es un bug de TypeScript o una decisión intencional?"
+   (Joel) Generico no garantiza el valor de string de mesaId, ya que en tiempo de ejecucion podria ser undefined, y es una decision intencional de React Router, ya que TypeScript solo realiza comprobaciones estaticas en nuestro codigo.
+
 
 3. "Tengo Omit<Pedido, "_id" | "creadoEn" | "actualizadoEn"> en CarritoPage.
    ¿Qué otros utility types de TypeScript existen que podrían servirme en
    este mismo proyecto? Por ejemplo: ¿para qué sirven Pick, Partial y Required?
    Muéstrame con un ejemplo concreto de Mesa o Plato."
+   (Joel)
+   - Pick<Plato, "nombre | precio"> — Crea un tipo nuevo agarrando solo esas dos propiedades.
+   - Partial<Mesa> — Convierte todas las propiedades de Mesa en opcionales.
+   - Required<Mesa> — Convierte todas las propiedades de Mesa en obligatorias.
 
 4. "¿Qué es el type narrowing que usamos en useParams y en el guard del Context?
    ¿Cuántos tipos de narrowing existen en TypeScript? Dame un ejemplo de
    cada uno con código del proyecto restaurante."
+   (Joel) El type narrowing es una técnica que permite reducir el tipo de una variable en un bloque de código
+   Tipos de narrowing:
+   1. Type guards: if (typeof variable === "string"), if (variable), if (variable instanceof Array)
+   2. Conditional Types: T extends U ? X : Y
+   3. Type Inference: varibale = "hola" 
+   4. Type Casting: <type>variable, variable as type
 
 5. "¿Cuál es la diferencia entre TypeScript en React y TypeScript en Next.js?
    ¿Qué tipos nuevos voy a necesitar aprender cuando empecemos Next.js?
    Muéstrame un ejemplo de un componente server de Next.js tipado."
+   (Joel)
+   TypeScript en React:
+    - Es una capa de tipos opcional que se ejecuta solo en tiempo de desarrollo.
+    - Se usa para mejorar la experiencia de desarrollo, no para producción.
+   TypeScript en Next.js:
+    - Es una capa de tipos obligatoria que se ejecuta en tiempo de desarrollo y compilación.
+    - Se usa para mejorar la experiencia de desarrollo y producción.
+   Nuevos tipos que necesitare aprender:
+    - PageProps, LayoutProps, etc.
+    Ejemplo de componente server de Next.js:
+
+   ```typescript
+    // app/page.tsx (server component)
+    interface Item { id: string; nombre: string }
+    export default async function Page() {
+       const data: Item[] = await fetch("https://api.example.com/items").then(res => res.json());
+       return <div>{data[0].nombre}</div>;
+    }
+   ```
+
+
 
 
 📊  CRITERIO — Bloque E completado cuando:
