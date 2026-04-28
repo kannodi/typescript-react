@@ -24,6 +24,9 @@
 • ¿Cuántos errores había al inicio del Día 1? ¿Y ahora? Anota la diferencia en reflexion.md sección D.
 • ¿Qué error fue el más difícil de resolver en los 3 días? ¿Por qué?
 
+(Joel) Al inicio habian alrededor de 100 errores, y actualmente ya no hay errores.
+
+
 # ⏱  Exploración con Claude - Bloque E  
 Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio — preguntas sobre cosas que no quedaron claras o que generan curiosidad sobre el siguiente paso.
 
