@@ -24,3 +24,32 @@
 • ¿Cuántos errores había al inicio del Día 1? ¿Y ahora? Anota la diferencia en reflexion.md sección D.
 • ¿Qué error fue el más difícil de resolver en los 3 días? ¿Por qué?
 
+# ⏱  Exploración con Claude - Bloque E  
+Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio — preguntas sobre cosas que no quedaron claras o que generan curiosidad sobre el siguiente paso.
+
+1. "Después de tipar 3 días el proyecto restaurante-frontend,
+   ¿qué tipo de errores de runtime previene TypeScript y cuáles NO?
+   Dame un ejemplo concreto de cada uno usando nuestro código."
+
+2. "En DetalleMesa.tsx usamos useParams<{ mesaId: string }>() pero
+   mesaId sigue siendo string | undefined. ¿Por qué el genérico no
+   garantiza que es string? ¿Es un bug de TypeScript o una decisión intencional?"
+
+3. "Tengo Omit<Pedido, "_id" | "creadoEn" | "actualizadoEn"> en CarritoPage.
+   ¿Qué otros utility types de TypeScript existen que podrían servirme en
+   este mismo proyecto? Por ejemplo: ¿para qué sirven Pick, Partial y Required?
+   Muéstrame con un ejemplo concreto de Mesa o Plato."
+
+4. "¿Qué es el type narrowing que usamos en useParams y en el guard del Context?
+   ¿Cuántos tipos de narrowing existen en TypeScript? Dame un ejemplo de
+   cada uno con código del proyecto restaurante."
+
+5. "¿Cuál es la diferencia entre TypeScript en React y TypeScript en Next.js?
+   ¿Qué tipos nuevos voy a necesitar aprender cuando empecemos Next.js?
+   Muéstrame un ejemplo de un componente server de Next.js tipado."
+
+
+📊  CRITERIO — Bloque E completado cuando:
+✓  El par hizo al menos 3 preguntas y discutió las respuestas
+✓  reflexion.md sección E tiene anotado al menos un concepto nuevo que aprendieron
+
