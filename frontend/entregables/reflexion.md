@@ -53,15 +53,18 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
    
 
 **Paolo:** Ts previene errores de compilacion cuando falta tipar algo o se envia algo que no coincide, no puede preveer los runtime, a comparacion de js explota cuando sucede
+**Joel:** Los errores que previene son los de type error, por ejemplo al usar un string como number y viceversa; no obstante, no previene errores en tiempo de ejecucion, por ejemplo al crear una comanda y que el backend falle.
+
+
 # 2. "En DetalleMesa.tsx usamos useParams<{ mesaId: string }>() pero
    mesaId sigue siendo string | undefined. ¿Por qué el genérico no
    garantiza que es string? ¿Es un bug de TypeScript o una decisión intencional?"
    
 
 **Paolo:** Esto esta hecho asi aproposito, es para poder filtrarlo mas adelante, el guard se asegura que de ahora en adelante el tipo de dato sea tratado como string.
-   
-
 **Joel:** Los errores que previene son los de type error, por ejemplo al usar un string como number y viseversa; no obstante, no previene errores en tiempo de ejecucion, por ejemplo al crear una comanda y que el backend falle.
+
+
 # 3. "Tengo Omit<Pedido, "_id" | "creadoEn" | "actualizadoEn"> en CarritoPage.
    ¿Qué otros utility types de TypeScript existen que podrían servirme en
    este mismo proyecto? Por ejemplo: ¿para qué sirven Pick, Partial y Required?
@@ -69,34 +72,32 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
    
 
 **Paolo:** Desconozco de momento mas utility types, pero con el tiempo aprender mas
-   
-
 **Joel:**
    - Pick<Plato, "nombre | precio"> — Crea un tipo nuevo agarrando solo esas dos propiedades.
    - Partial<Mesa> — Convierte todas las propiedades de Mesa en opcionales.
    - Required<Mesa> — Convierte todas las propiedades de Mesa en obligatorias.
+
+
 # 4. "¿Qué es el type narrowing que usamos en useParams y en el guard del Context?
    ¿Cuántos tipos de narrowing existen en TypeScript? Dame un ejemplo de
    cada uno con código del proyecto restaurante."
 
 
 **Paolo:** Gracias al type narrowing podemos filtrar tipos grandes, usando el !id nos aseguramos que pase, ya que ahora si esperaba el id
-   
-
 **Joel:** El type narrowing es una técnica que permite reducir el tipo de una variable en un bloque de código
    Tipos de narrowing:
    1. Type guards: if (typeof variable === "string"), if (variable), if (variable instanceof Array)
    2. Conditional Types: T extends U ? X : Y
    3. Type Inference: varibale = "hola" 
    4. Type Casting: <type>variable, variable as type
+
+
 # 5. "¿Cuál es la diferencia entre TypeScript en React y TypeScript en Next.js?
    ¿Qué tipos nuevos voy a necesitar aprender cuando empecemos Next.js?
    Muéstrame un ejemplo de un componente server de Next.js tipado."
    
 
 **Paolo:** En react vite, usamos componentes del cliente, de nuestro lado, en cambio next.js usamos componentes de afuera, del servidor, que vienen de las bases de datos, en su mayoria en funciones asincronas.
-   
-
 **Joel:**
    TypeScript en React:
     - Es una capa de tipos opcional que se ejecuta solo en tiempo de desarrollo.
@@ -117,6 +118,7 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
     }
    ```
 
+
 📊  CRITERIO — Bloque E completado cuando:
 ✓  El par hizo al menos 3 preguntas y discutió las respuestas
 ✓  reflexion.md sección E tiene anotado al menos un concepto nuevo que aprendieron
@@ -127,22 +129,32 @@ Objetivo: Cerrar los 3 días con preguntas reales. No preguntas de ejercicio —
 
 
 **Paolo:** Conceptos como el tipo unknown, tengo la certeza de que un error puede ser desconocido, viene de cualquier lado, pero el como mostrarlo es complejo para mi.
+**Joel:** El tipo unknown, ya que puede recibir cualquier tipo de valor y no podemos acceder a sus propiedades sin antes validarlo, lo que lo hace un tipo peligroso.
+
+
 • ¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?
 
 
 **Paolo:**  Errores que no se esperaban en el documento fueron los mas inesperados y utiles, ya que nos obligaron a investigar y entenderlos
+**Joel:** El type narrowing, ya que nos permite filtrar tipos grandes y asegurarnos de que el tipo de dato sea el correcto, aunque es un riesgo.
+
+
 • ¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?
 
 
 **Paolo:** En el DetalleMesa, usamos !id sabiendo que puede ser undefined
 • Total de errores al inicio del Día 1: 105  →  Total de errores hoy: 0
-• Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript: 
-
+• Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript:
 
 **Paolo:** Dejar comentarios que ayuden con el entendimiento de la funcion o parte de codigo
+
+**Joel:** Encontraria Bugs en el manejo de errores, en los componentes y en los servicios.
+
 # ⏱  Feedback 30 segundos — Cierre
 • ¿Qué parte del sprint cambiarías si lo hicieras de nuevo?
 • Navigator le pregunta al Driver: ¿qué es lo que más recuerdas de TypeScript después de estos 3 días?
 
 
 **Paolo:** El orden con lo que tipamos, empezando por context o api, luego todo seria mas sencillo, ya que los componentes se construyen a partir de ellos.
+
+**Joel:** Cambiaría el no haber investigado más a fondo los Utility Types desde el inicio. Lo que más recuerdo es la seguridad y velocidad que te da el autocompletado una vez que todo está tipado.
