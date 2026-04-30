@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Mesa, Pedido, EstadoPedido, Plato } from '../types';
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 console.log(BASE_URL);
 
 // 1. Creamos la instancia (nuestra "aduana" privada)
@@ -36,8 +36,8 @@ api.interceptors.response.use(
 
 // getPlatos AHORA USA `api` -> El interceptor le pondrá el token automáticamente
 export async function getPlatos(): Promise<Plato[]> {
-    // Como la instancia ya tiene baseURL, solo ponemos la ruta relativa ('/menu')
-    const response = await api.get<Plato[]>('/menu', {
+    // Como la instancia ya tiene baseURL, solo ponemos la ruta relativa ('/platos')
+    const response = await api.get<Plato[]>('/platos', {
         headers: {
             'ngrok-skip-browser-warning': 'true'
         }
